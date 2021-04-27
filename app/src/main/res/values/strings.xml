@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidProject2</string>
+    <string name="menu_month">월</string>
+    <string name="menu_week">주</string>
 </resources>
