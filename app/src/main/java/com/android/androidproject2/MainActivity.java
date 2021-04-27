@@ -34,9 +34,19 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.month_view:
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_container, new MonthViewFragment());
+                fragmentTransaction.commit();
+
                 Toast.makeText(getApplicationContext(), "month_view", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.week_view:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_container, new WeekViewFragment());
+                fragmentTransaction.commit();
+
                 Toast.makeText(getApplicationContext(), "week_view", Toast.LENGTH_SHORT).show();
                 return true;
             default:
