@@ -4,19 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/teal_700"
     tools:context=".MonthCalendarFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="일 월 화 수 목 금 토" />
 
-    <TextView
-        android:id="@+id/month_calendar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="6 * 7 그리드 뷰" />
+        android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/calendar_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#90B0E0"
+            android:numColumns="7"
+            android:horizontalSpacing="1dp"
+            android:verticalSpacing="1dp">
+
+        </GridView>
+    </LinearLayout>
 
 </LinearLayout>
