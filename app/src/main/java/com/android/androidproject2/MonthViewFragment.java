@@ -3,6 +3,8 @@ package com.android.androidproject2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -71,7 +74,18 @@ public class MonthViewFragment extends Fragment {
         FragmentStateAdapter adapter = new MonthCalendarAdapter(this);
         vpPager.setAdapter(adapter);
 
-        // Inflate the layout for this fragment
+        vpPager.setCurrentItem(10);
+
+        // 페이지 넘어가면 메시지 나옴
+        vpPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+
+            @Override
+            public void onPageSelected(int position) {
+                Toast.makeText(getActivity().getApplicationContext(),
+                        "Selected page position: " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return rootView;
     }
 }

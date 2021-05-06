@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,13 +33,13 @@ public class MonthCalendarFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
+    // 년도와 달
     private int mParam1;
     private int mParam2;
 
-
-    // 년도 날짜 선언
     int year;
     int month;
+    Calendar cal;
 
     public MonthCalendarFragment() {
         // Required empty public constructor
@@ -66,9 +67,10 @@ public class MonthCalendarFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getInt(ARG_PARAM1);
             mParam2 = getArguments().getInt(ARG_PARAM2);
+            year = mParam1;
+            month = mParam2;
+
         }
-
-
     }
 
     @Override
@@ -78,19 +80,12 @@ public class MonthCalendarFragment extends Fragment {
         View calView = inflater.inflate(R.layout.fragment_month_calendar, container, false);
 
         // 달력에서 날짜 받기
-        Calendar cal = Calendar.getInstance();
+        cal = Calendar.getInstance();
 
-        // 만약 받은 정보가 없다면 오늘 년도, 달 넣기
-        year = cal.get(Calendar.YEAR);
-        month = cal.get(Calendar.MONTH)+1;
-
-
-        // 앱바 타이틀 변경
         FragmentActivity activity = getActivity();
         if (activity != null) {
             ((MainActivity) activity).setActionBarTitle(year+"년 "+month+"월");
         }
-
 
         // 달의 첫번째 요일 알기 위함
         cal.set(year, month-1, 1);
@@ -112,7 +107,6 @@ public class MonthCalendarFragment extends Fragment {
         for(int i = 0; i < v; i++) {
             adapt.addItem(new DateItem(" "));
         }
-
 
         gridview.setAdapter(adapt);
 
