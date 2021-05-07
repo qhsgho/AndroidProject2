@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // 앱바 타이틀 변경
+    // 앱바 핸들링 메서드
     public void setActionBarTitle(String title) {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
