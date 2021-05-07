@@ -39,7 +39,6 @@ public class MonthCalendarFragment extends Fragment {
 
     int year;
     int month;
-    Calendar cal;
 
     public MonthCalendarFragment() {
         // Required empty public constructor
@@ -90,7 +89,7 @@ public class MonthCalendarFragment extends Fragment {
         View calView = inflater.inflate(R.layout.fragment_month_calendar, container, false);
 
         // 달력에서 날짜 받기
-        cal = Calendar.getInstance();
+        Calendar cal = Calendar.getInstance();
 
         // 달의 첫번째 요일 알기 위함
         cal.set(year, month-1, 1);
@@ -115,7 +114,7 @@ public class MonthCalendarFragment extends Fragment {
 
         gridview.setAdapter(adapt);
 
-        // 버튼 클릭 이벤트 처리
+        // 클릭 이벤트 처리
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             TextView previousView = null;
 
