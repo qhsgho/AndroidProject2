@@ -33,7 +33,7 @@ public class MonthCalendarAdapter extends FragmentStateAdapter {
         return NUM_ITEMS;
     }
 
-    // position에 따른 년도와 월 계산
+    // positino에 따른 년도와 월 계산
     public void findSwifeday(int swipe) {
 
         if((month + swipe) >= 13 && (month + swipe) % 12 != 0) {

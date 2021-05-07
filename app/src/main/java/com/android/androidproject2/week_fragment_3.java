@@ -3,27 +3,17 @@ package com.android.androidproject2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MonthViewFragment#newInstance} factory method to
+ * Use the {@link week_fragment_3#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MonthViewFragment extends Fragment {
+public class week_fragment_3 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +24,7 @@ public class MonthViewFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MonthViewFragment() {
+    public week_fragment_3() {
         // Required empty public constructor
     }
 
@@ -44,11 +34,11 @@ public class MonthViewFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MonthViewFragment.
+     * @return A new instance of fragment week_fragment_3.
      */
     // TODO: Rename and change types and number of parameters
-    public static MonthViewFragment newInstance(String param1, String param2) {
-        MonthViewFragment fragment = new MonthViewFragment();
+    public static week_fragment_3 newInstance(String param1, String param2) {
+        week_fragment_3 fragment = new week_fragment_3();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,23 +58,9 @@ public class MonthViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_month_view, container, false);
-
-        ViewPager2 vpPager = rootView.findViewById(R.id.vpPager);
-        FragmentStateAdapter adapter = new MonthCalendarAdapter(this);
-        vpPager.setAdapter(adapter);
-
-        vpPager.setCurrentItem(10);
-
-        // 페이지 넘어가면 메시지 나옴
-        vpPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-
-            @Override
-            public void onPageSelected(int position) {
-                Toast.makeText(getActivity().getApplicationContext(),
-                        "Selected page position: " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
+        // Inflate the layout for this fragment
+        ViewGroup rootView = (ViewGroup) inflater.inflate(
+                R.layout.fragment_week_3, container, false);
 
         return rootView;
     }

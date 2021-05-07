@@ -3,6 +3,8 @@ package com.android.androidproject2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +61,13 @@ public class WeekViewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_week_view, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_week_view, container, false);
+        ViewPager2 vpPager = rootView.findViewById(R.id.vpPager);
+        FragmentStateAdapter adapter = new week_fragement_Adapter(this,3);
+        vpPager.setAdapter(adapter);
+
+        vpPager.setCurrentItem(1000);
+        vpPager.setOffscreenPageLimit(3);
+        return rootView;
     }
 }
