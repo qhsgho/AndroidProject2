@@ -76,7 +76,7 @@ public class MonthViewFragment extends Fragment {
 
         vpPager.setCurrentItem(50);
 
-        // 페이지 넘어가면 메시지 나옴
+/*        // 페이지 넘어가면 메시지 나옴
         vpPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
 
             @Override
@@ -85,7 +85,7 @@ public class MonthViewFragment extends Fragment {
                         "Selected page position: " + position, Toast.LENGTH_SHORT).show();
             }
         });
-
+*/
         return rootView;
     }
 }

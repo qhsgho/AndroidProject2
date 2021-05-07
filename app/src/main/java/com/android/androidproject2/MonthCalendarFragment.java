@@ -1,9 +1,9 @@
 package com.android.androidproject2;
 
-import android.app.ActionBar;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -73,6 +73,16 @@ public class MonthCalendarFragment extends Fragment {
         }
     }
 
+    // 적절한 생명주기에서 타이틀 변경
+    @Override
+    public void onResume() {
+        super.onResume();
+        FragmentActivity activity = getActivity();
+        if (activity != null) {
+            ((MainActivity) activity).setActionBarTitle(year+"년 "+month+"월");
+        }
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -81,11 +91,6 @@ public class MonthCalendarFragment extends Fragment {
 
         // 달력에서 날짜 받기
         cal = Calendar.getInstance();
-
-        FragmentActivity activity = getActivity();
-        if (activity != null) {
-            ((MainActivity) activity).setActionBarTitle(year+"년 "+month+"월");
-        }
 
         // 달의 첫번째 요일 알기 위함
         cal.set(year, month-1, 1);
