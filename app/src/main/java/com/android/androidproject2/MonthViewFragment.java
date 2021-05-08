@@ -70,11 +70,13 @@ public class MonthViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_month_view, container, false);
 
-        ViewPager2 vpPager = rootView.findViewById(R.id.vpPager);
+        ViewPager2 vpPager = rootView.findViewById(R.id.vpPager_month);
         FragmentStateAdapter adapter = new MonthCalendarAdapter(this);
         vpPager.setAdapter(adapter);
 
-        vpPager.setCurrentItem(50);
+        vpPager.setCurrentItem(20);
+
+        vpPager.setOffscreenPageLimit(40);
 
 /*        // 페이지 넘어가면 메시지 나옴
         vpPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {

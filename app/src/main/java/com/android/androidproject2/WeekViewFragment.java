@@ -60,14 +60,19 @@ public class WeekViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_week_view, container, false);
-        ViewPager2 vpPager = rootView.findViewById(R.id.vpPager);
-        FragmentStateAdapter adapter = new week_fragement_Adapter(this,3);
+
+
+        ViewPager2 vpPager = rootView.findViewById(R.id.vpPager_week);
+        FragmentStateAdapter adapter = new WeekCalendarAdapter(this);
         vpPager.setAdapter(adapter);
 
-        vpPager.setCurrentItem(1000);
-        vpPager.setOffscreenPageLimit(3);
+        vpPager.setCurrentItem(20);
+
+        // 버튼이 안먹히는 문제 해결
+        vpPager.setOffscreenPageLimit(40);
+
+
         return rootView;
     }
 }

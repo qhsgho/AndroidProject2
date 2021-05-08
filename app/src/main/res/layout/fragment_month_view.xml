@@ -64,7 +64,7 @@
     </LinearLayout>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vpPager"
+        android:id="@+id/vpPager_month"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
