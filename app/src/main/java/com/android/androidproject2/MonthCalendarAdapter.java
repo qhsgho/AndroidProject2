@@ -8,7 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import java.util.Calendar;
 
 public class MonthCalendarAdapter extends FragmentStateAdapter {
-    private static int NUM_ITEMS=100;
+    private static int NUM_ITEMS=40;
     public MonthCalendarAdapter(@NonNull Fragment fragment) {
         super(fragment);
     }
@@ -23,7 +23,7 @@ public class MonthCalendarAdapter extends FragmentStateAdapter {
         year = cal.get(Calendar.YEAR);
         month = cal.get(Calendar.MONTH)+1;
 
-        findSwifeday(position - 50);
+        findSwifeday(position - 20);
         return MonthCalendarFragment.newInstance(year, month);
     }
 
@@ -32,7 +32,7 @@ public class MonthCalendarAdapter extends FragmentStateAdapter {
         return NUM_ITEMS;
     }
 
-    // positino에 따른 년도와 월 계산
+    // position에 따른 년도와 월 계산
     public void findSwifeday(int swipe) {
         int result;
         result = month + swipe;
