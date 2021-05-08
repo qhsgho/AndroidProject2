@@ -14,30 +14,33 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link week_fragment_horizontal1#newInstance} factory method to
+ * Use the {@link Week_Fragement_Day#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class week_fragment_horizontal1 extends Fragment {
+public class Week_Fragement_Day extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final String ARG_PARAM3 = "param3";
-    // TODO: Rename and change types of parameters
-    private int mParam1;
-    private int mParam2;
-    private int mParam3;
-    int year;
-    int month;
-    int day;
-    int count;
 
-    public week_fragment_horizontal1() {
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+    private String mParam3;
+
+
+    int year;
+    int day;
+    int month;
+
+    public Week_Fragement_Day() {
         // Required empty public constructor
     }
 
@@ -45,12 +48,14 @@ public class week_fragment_horizontal1 extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-
-     * @return A new instance of fragment week_fragment_horizontal1.
+     * @param year Parameter 1.
+     * @param month Parameter 2.
+     * @param day Parameter 3.
+     * @return A new instance of fragment Week_Fragement_Day.
      */
     // TODO: Rename and change types and number of parameters
-    public static week_fragment_horizontal1 newInstance(int year, int month,int day) {
-        week_fragment_horizontal1 fragment = new week_fragment_horizontal1();
+    public static Week_Fragement_Day newInstance(int year, int month,int day) {
+        Week_Fragement_Day fragment = new Week_Fragement_Day();
         Bundle args = new Bundle();
         args.putInt(ARG_PARAM1, year);
         args.putInt(ARG_PARAM2, month);
@@ -63,14 +68,12 @@ public class week_fragment_horizontal1 extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getInt(ARG_PARAM1);
-            mParam2 = getArguments().getInt(ARG_PARAM2);
-            mParam3 = getArguments().getInt(ARG_PARAM3);
-            year = mParam1;
-            month = mParam2;
-            day = mParam3;
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam3 = getArguments().getString(ARG_PARAM3);
         }
     }
+
     public void onResume() {
         super.onResume();
         FragmentActivity activity = getActivity();
@@ -83,55 +86,62 @@ public class week_fragment_horizontal1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View calView = inflater.inflate(R.layout.fragment_week_1, container, false);
-
-        // 달력에서 날짜 받기
+        View calView = inflater.inflate(R.layout.fragment_week__fragement__day, container, false);
         Calendar cal = Calendar.getInstance();
+        cal.set(year, month-1, day);
 
-        // 달의 첫번째 요일 알기 위함
-        cal.set(year, month-1, 1);
-
-        day= cal.get(Calendar.DATE);
         GridView gridview = (GridView) calView.findViewById(R.id.calendar_gridview);
         GridListAdapter adapt = new GridListAdapter();
 
+        int count=0;
 
-        // 빈 요일만큼 달의 앞부분 공백 추가
-        if(day == 1 && count ==0) {
+        if(count !=7)
+        {
 
-                count =0;
-            for (int i = 1; i < cal.get(Calendar.DAY_OF_WEEK); i++) {
+             if(day==1&&count==0)
+             {
+                 for(int i = 1; i < cal.get(Calendar.DAY_OF_WEEK); i++) {
                 adapt.addItem(new DateItem(" "));
-            }
-            count = count + cal.get(Calendar.DAY_OF_WEEK);
-
-        }
-
-
-        // 날짜 넣기
-        else {
-            if(count<=7&&finddaynum(year,month)<=day)
-            {
-
-                adapt.addItem(new DateItem(Integer.toString(day)));
                 count++;
-                day++;
-            }
-            else{
-                count = 0 ;
-            }
+                 }
+             }
+            else {
+                 for (int i = 0; i < finddaynum(year, month); i++) {
+                     adapt.addItem(new DateItem(Integer.toString(i + 1)));
+                     count++;
+                 }
+             }
+
         }
 
-        gridview.setAdapter(adapt);
 
-        // 클릭 이벤트 처리
+
+
+
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            TextView previousView = null;
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                TextView textView = (TextView)view.findViewById(R.id.item_text);
+
+                if((String) textView.getText() != " ") {
+                    Toast.makeText(view.getContext(),year+"."+month+"."+textView.getText(),Toast.LENGTH_SHORT).show();
+                    if(previousView != null) {
+                        // revert the previous view when a new item is clicked
+                        previousView.setBackgroundColor(Color.WHITE);
+                    }
+                    textView.setBackgroundColor(Color.CYAN);
+                    previousView = textView;
+                }
+
+            }
+        });
 
 
         return calView;
-
     }
-
-
     public int finddaynum(int year, int month) {
         int day_num = 0;
         switch (month) {
@@ -159,4 +169,6 @@ public class week_fragment_horizontal1 extends Fragment {
         }
         return day_num;
     }
+
+
 }

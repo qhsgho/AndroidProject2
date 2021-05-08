@@ -5,22 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".week_fragment_1">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="19dp"
-        android:orientation="horizontal">
 
-        <GridView
-            android:id="@+id/calendar_week1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:stretchMode="columnWidth"
-            android:numColumns="7">
-        </GridView>
-
-    </LinearLayout>
 
 
     <LinearLayout
@@ -28,53 +13,52 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            ></TextView>
+
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"></TextView>>
 
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="0"></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="1"></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="2"></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="3"></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="4"></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="5"></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -83,18 +67,21 @@
             ></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="7"></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="8"></TextView>
 
         <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -104,21 +91,636 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="17dp"
         android:layout_marginLeft="17dp"
-        android:layout_marginTop="72dp"
         android:orientation="vertical">
 
-        <GridView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:horizontalSpacing="1dp"
-            android:numColumns="7"
-            android:background="#ffeeeeee"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="1dp"
+        <TableLayout
 
-            ></GridView>
+            android:layout_margin="1dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+
+                android:layout_weight="1"
+                android:background="#D3D3D3"
+                >
+
+                <TextView
+
+                    android:id="@+id/c1"
+
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+            </TableRow>
+            <TableRow
+                android:background="#D3D3D3"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </TextView>
+
+            </TableRow>
+            <TableRow
+                android:background="#D3D3D3"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+            <TableRow
+                android:background="#D3D3D3"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+            <TableRow
+                android:background="#D3D3D3"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+            <TableRow
+                android:background="#D3D3D3"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+            <TableRow
+                android:background="#D3D3D3"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#D3D3D3">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+            <TableRow
+                android:background="#D3D3D3"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+
+            <TableRow
+                android:background="#D3D3D3"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+
+        </TableLayout>
     </LinearLayout>
 
 

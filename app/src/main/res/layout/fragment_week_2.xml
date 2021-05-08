@@ -6,36 +6,14 @@
     tools:context=".week_fragment_2">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="19dp"
-        android:orientation="horizontal">
-
-        <GridView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:stretchMode="columnWidth"
-            android:numColumns="7">
-        </GridView>
-
-    </LinearLayout>
 
     <LinearLayout
+
         android:layout_width="18dp"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            ></TextView>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"></TextView>>
 
         <TextView
             android:layout_width="match_parent"
@@ -103,420 +81,628 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="17dp"
+
         android:layout_marginLeft="17dp"
-        android:layout_marginTop="72dp"
+
+
         android:orientation="vertical">
 
         <TableLayout
+            android:layout_margin="1dp"
 
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TableRow
+                android:layout_weight="1"
+                android:background="#D3D3D3"
+                >
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+            <TableRow
+                android:background="#D3D3D3"
                 android:layout_weight="1">
 
                 <EditText
                     android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
                 <EditText
                     android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
                     android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
                     android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
                     android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
                     android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
                     android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
             </TableRow>
             <TableRow
+                android:background="#D3D3D3"
                 android:layout_weight="1">
 
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
             </TableRow>
             <TableRow
+                android:background="#D3D3D3"
                 android:layout_weight="1">
 
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
             </TableRow>
             <TableRow
+                android:background="#D3D3D3"
                 android:layout_weight="1">
 
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
             </TableRow>
             <TableRow
+                android:background="#D3D3D3"
                 android:layout_weight="1">
 
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
             </TableRow>
             <TableRow
+                android:background="#D3D3D3"
                 android:layout_weight="1">
 
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
+
+                </EditText>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#D3D3D3">
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                </EditText>
+
+                <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
 
                 </EditText>
 
             </TableRow>
             <TableRow
+                android:background="#D3D3D3"
                 android:layout_weight="1">
 
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
             </TableRow>
+
             <TableRow
+                android:background="#D3D3D3"
                 android:layout_weight="1">
 
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
-            </TableRow>
-            <TableRow
-                android:layout_weight="1">
-
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 
-            </TableRow>
-            <TableRow
-                android:layout_weight="1">
-
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
+
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
 
-                </EditText>
                 <EditText
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
                     android:layout_weight="1"
-                    android:background="null">
-
-                </EditText>
-                <EditText
-                    android:layout_weight="1"
-                    android:background="null">
+                    android:background="@color/white">
 
                 </EditText>
 

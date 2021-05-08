@@ -3,17 +3,21 @@ package com.android.androidproject2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link week_fragment_horizontal2#newInstance} factory method to
+ * Use the {@link Week_View_Fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class week_fragment_horizontal2 extends Fragment {
+public class Week_View_Fragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +28,8 @@ public class week_fragment_horizontal2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public week_fragment_horizontal2() {
+
+    public Week_View_Fragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +39,11 @@ public class week_fragment_horizontal2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment week_fragment_horizontal2.
+     * @return A new instance of fragment WeekViewFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static week_fragment_horizontal2 newInstance(String param1, String param2) {
-        week_fragment_horizontal2 fragment = new week_fragment_horizontal2();
+    public static Week_View_Fragment newInstance(String param1, String param2) {
+        Week_View_Fragment fragment = new Week_View_Fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +64,21 @@ public class week_fragment_horizontal2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_week_horizontal2, container, false);
+        View rootView =  inflater.inflate(R.layout.fragment_week_view, container, false);
+
+        ViewPager2 vpPager = rootView.findViewById(R.id.vpPager);
+
+
+
+        FragmentStateAdapter adapter = new week_fragement_Adapter(this,3);
+        vpPager.setAdapter(adapter);
+
+
+        vpPager.setCurrentItem(1000);
+        vpPager.setOffscreenPageLimit(3);
+
+
+
+        return rootView;
     }
 }
