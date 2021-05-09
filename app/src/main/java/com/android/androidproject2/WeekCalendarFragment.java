@@ -148,7 +148,7 @@ public class WeekCalendarFragment extends Fragment {
         });
 
 
-        // 클릭 이벤트 처리 (time)
+        // 클릭 이벤트 처리 (timeline)
         gridview_time.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             TextView previousView = null;
 

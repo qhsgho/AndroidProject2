@@ -126,7 +126,6 @@ public class MonthCalendarFragment extends Fragment {
                 if((String) textView.getText() != " ") {
                     Toast.makeText(view.getContext(),year+"."+month+"."+textView.getText(),Toast.LENGTH_SHORT).show();
                     if(previousView != null) {
-                        // revert the previous view when a new item is clicked
                         previousView.setBackgroundColor(Color.WHITE);
                     }
                     textView.setBackgroundColor(Color.CYAN);

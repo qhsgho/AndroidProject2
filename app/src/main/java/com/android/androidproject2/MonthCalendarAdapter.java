@@ -23,7 +23,7 @@ public class MonthCalendarAdapter extends FragmentStateAdapter {
         year = cal.get(Calendar.YEAR);
         month = cal.get(Calendar.MONTH)+1;
 
-        findSwifeday(position - 20);
+        findSwipeday(position - 20);
         return MonthCalendarFragment.newInstance(year, month);
     }
 
@@ -33,7 +33,7 @@ public class MonthCalendarAdapter extends FragmentStateAdapter {
     }
 
     // position에 따른 년도와 월 계산
-    public void findSwifeday(int swipe) {
+    public void findSwipeday(int swipe) {
         int result;
         result = month + swipe;
 
