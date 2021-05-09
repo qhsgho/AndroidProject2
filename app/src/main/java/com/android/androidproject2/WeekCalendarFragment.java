@@ -86,8 +86,17 @@ public class WeekCalendarFragment extends Fragment {
         WeekGridListAdapter adapt = new WeekGridListAdapter();
 
         // 시간 그리드 뷰
-        GridView gridview_time = (GridView) calView.findViewById(R.id.calendar_gridview_week_time);
+//        GridView gridview_time = (GridView) calView.findViewById(R.id.calendar_gridview_week_time);
+//        WeekTimeGridListAdapter adapt_time = new WeekTimeGridListAdapter();
+
+        ExpandableHeightGridView gridview_timeline = (ExpandableHeightGridView) calView.findViewById(R.id.calendar_gridview_week_timeline);
+        gridview_timeline.setExpanded(true);
+        WeekTimeGridListAdapter adapt_timeline = new WeekTimeGridListAdapter();
+
+        ExpandableHeightGridView gridview_time = (ExpandableHeightGridView) calView.findViewById(R.id.calendar_gridview_week_time);
+        gridview_time.setExpanded(true);
         WeekTimeGridListAdapter adapt_time = new WeekTimeGridListAdapter();
+
 
         int weeksundate = sundate;
         int restbox = 1;
@@ -109,8 +118,20 @@ public class WeekCalendarFragment extends Fragment {
             adapt_time.addItem(new DateItem(" "));
         }
 
+
+        for(int i = 0; i < 24; i++) {
+            adapt_timeline.addItem(new DateItem(""+i));
+        }
+
         gridview.setAdapter(adapt);
+//        gridview_time.setAdapter(adapt_time);
+
+        gridview_timeline.setAdapter(adapt_timeline);
+        adapt_timeline.notifyDataSetChanged();
+
         gridview_time.setAdapter(adapt_time);
+        adapt_time.notifyDataSetChanged();
+
 
         // 클릭 이벤트 처리 달력
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -129,7 +150,8 @@ public class WeekCalendarFragment extends Fragment {
             }
         });
 
-        // 클릭 이벤트 처리 시간
+
+        // 클릭 이벤트 처리 (time)
         gridview_time.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             TextView previousView = null;
 
@@ -147,6 +169,9 @@ public class WeekCalendarFragment extends Fragment {
                 previousView = textView;
             }
         });
+
+
+
 
         return calView;
     }

@@ -4,13 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="10"
     tools:context=".WeekCalendarFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:weightSum="7.4"
         android:orientation="horizontal">
 
@@ -37,41 +35,65 @@
         </LinearLayout>
     </LinearLayout>
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="9"
-        android:weightSum="7.4"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
 
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.4"
-            android:orientation="vertical">
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="7"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:weightSum="7.4"
+            >
 
-            <GridView
-                android:id="@+id/calendar_gridview_week_time"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:numColumns="7"
-                android:background="#90B0E0"
-                android:horizontalSpacing="1dp"
-                android:verticalSpacing="1dp"
-                > </GridView>
+                android:orientation="vertical"
+                android:layout_weight="0.4"
+                >
+
+                <com.android.androidproject2.ExpandableHeightGridView
+                    android:id="@+id/calendar_gridview_week_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numColumns="1"
+                    android:horizontalSpacing="1dp"
+                    android:verticalSpacing="1dp"
+                    android:isScrollContainer="false"
+                    > </com.android.androidproject2.ExpandableHeightGridView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="7"
+                >
+
+                <com.android.androidproject2.ExpandableHeightGridView
+                    android:id="@+id/calendar_gridview_week_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numColumns="7"
+                    android:background="#90B0E0"
+                    android:horizontalSpacing="1dp"
+                    android:verticalSpacing="1dp"
+                    android:isScrollContainer="false"
+                    > </com.android.androidproject2.ExpandableHeightGridView>
+
+            </LinearLayout>
 
 
         </LinearLayout>
-    </LinearLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>
 
