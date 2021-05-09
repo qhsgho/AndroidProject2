@@ -68,10 +68,7 @@ public class WeekViewFragment extends Fragment {
         vpPager.setAdapter(adapter);
 
         vpPager.setCurrentItem(20);
-
-        // 버튼이 안먹히는 문제 해결
         vpPager.setOffscreenPageLimit(40);
-
 
         return rootView;
     }

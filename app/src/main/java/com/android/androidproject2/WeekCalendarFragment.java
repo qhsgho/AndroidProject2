@@ -85,14 +85,12 @@ public class WeekCalendarFragment extends Fragment {
         GridView gridview = (GridView) calView.findViewById(R.id.calendar_gridview_week);
         WeekGridListAdapter adapt = new WeekGridListAdapter();
 
-        // 시간 그리드 뷰
-//        GridView gridview_time = (GridView) calView.findViewById(R.id.calendar_gridview_week_time);
-//        WeekTimeGridListAdapter adapt_time = new WeekTimeGridListAdapter();
-
+        // 시간부분 그리드 뷰
         ExpandableHeightGridView gridview_timeline = (ExpandableHeightGridView) calView.findViewById(R.id.calendar_gridview_week_timeline);
         gridview_timeline.setExpanded(true);
         WeekTimeGridListAdapter adapt_timeline = new WeekTimeGridListAdapter();
 
+        // 격자부분 그리드 뷰
         ExpandableHeightGridView gridview_time = (ExpandableHeightGridView) calView.findViewById(R.id.calendar_gridview_week_time);
         gridview_time.setExpanded(true);
         WeekTimeGridListAdapter adapt_time = new WeekTimeGridListAdapter();
@@ -124,7 +122,6 @@ public class WeekCalendarFragment extends Fragment {
         }
 
         gridview.setAdapter(adapt);
-//        gridview_time.setAdapter(adapt_time);
 
         gridview_timeline.setAdapter(adapt_timeline);
         adapt_timeline.notifyDataSetChanged();
@@ -169,9 +166,6 @@ public class WeekCalendarFragment extends Fragment {
                 previousView = textView;
             }
         });
-
-
-
 
         return calView;
     }

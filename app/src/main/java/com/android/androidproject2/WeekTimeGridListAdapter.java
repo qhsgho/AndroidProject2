@@ -45,9 +45,6 @@ public class WeekTimeGridListAdapter extends BaseAdapter {
         TextView dateText = calView.findViewById(R.id.item_text_week_time);
         dateText.setText(dateitem.getDate());
 
-        // 크기 구현 진행중
-//       dateText.setHeight(screen_height/2);
-
         return calView;
     }
 }
